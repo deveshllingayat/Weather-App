@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-secondary">
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" >Weather App</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="about">About</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2" id="city"
+              type="search"
+              placeholder="Enter Location"
+              aria-label="Search"
+            />
+            <button class="btn btn-light" type="submit"id="submit">
+              &#128269;
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Weather for nagpur  -->
+    <div class="row d-flex justify-content-center " id="main">
+    <h1 class="text-center text-light mt-4 mb-3">Weather for <span id="cityName"></span></h1>
+
+      <div class="col-md-3 m-2">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Temperature</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              <span class="temp"></span><small class="text-muted fw-light"> &#x2103;</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Temperature is <span class="temp"></span> &#x2103;</li>
+              <li>Min. Temperature is <span id="min_temp"></span> &#x2103;</li>
+              <li>Max. Temperature is <span id="max_temp"></span> &#x2103;</li>
+            </ul>
+            <div class="text-center h1"><span id="emotion"></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 m-2">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Wind</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              <span class="speed"></span><small class="text-muted fw-light"> Km/hr</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Humidity is <span id="humidity"></span> %</li>
+              <li>Wind Speed is <span class="speed"></span> Km/hr</li>
+              <li>Direction is <span id="wind_degrees"></span>&#176;</li>
+            </ul>
+            <div class="text-center h1"><span id="wind"></span></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 m-2">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Sun Timing</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title text-center">
+              <span id="sun"></span>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Feels like is <span id="feels_like"></span> &#x2103;</li>
+              <li>Sunrise time is <span id="sunrise"></span></li>
+              <li>Sunset time is <span id="sunset"></span></li>
+            </ul>
+            <div class="text-center h1"><span id="time"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
